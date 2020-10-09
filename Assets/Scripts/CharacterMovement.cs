@@ -6,19 +6,21 @@ public class CharacterMovement : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody rb;
-    private float m_walkSpeed;
-    private float m_turnSpeed;
+
+    [Range(0.5f, 10.0f)]
+    public float m_walkSpeed = 6.0f;
+
+    [Range(1f, 100.0f)]
+    public float m_turnSpeed = 75.0f;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        rb.constraints = 
-            RigidbodyConstraints.FreezeRotationX | 
-            RigidbodyConstraints.FreezeRotationY | 
+        rb.constraints =
+            RigidbodyConstraints.FreezeRotationX |
+            RigidbodyConstraints.FreezeRotationY |
             RigidbodyConstraints.FreezeRotationZ;
-        m_walkSpeed = 5f;
-        m_turnSpeed = 70f;
     }
 
     void Update()
@@ -26,13 +28,13 @@ public class CharacterMovement : MonoBehaviour
         //get W/S button pressed
         float v = Input.GetAxis("Vertical") * 1f;
 
-        //since animtor does not have walking backward
-        //player will move backward when the S key is pressed
-        if (v < 0)
-            this.transform.Translate(0, 0, -m_walkSpeed * Time.deltaTime);
-
         //update animator as well as walk forward
         anim.SetFloat("Forward", v);
+
+        //since animtor does not have walking backward
+        //player will move backward when the S key is pressed
+        if (Input.GetKey(KeyCode.S))
+            this.transform.Translate(0, 0, -m_walkSpeed * Time.deltaTime);
 
         //rotation
         if (Input.GetKey(KeyCode.A))

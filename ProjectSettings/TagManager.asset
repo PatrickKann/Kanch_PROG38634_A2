@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - EndOfRoad
   - EndOfSidewalk
+  - Car
+  - Pedestrian
   layers:
   - Default
   - TransparentFX
