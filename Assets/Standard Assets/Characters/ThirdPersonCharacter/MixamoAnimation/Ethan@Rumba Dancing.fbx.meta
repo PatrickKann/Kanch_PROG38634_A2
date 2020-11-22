@@ -19,18 +19,13 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Errors found in
-      old project file will be treated as a warnings. Configuration mis-match will
-      be ignored, but current Configuration needs to be fixed:\n\tParent for 'EthanHips'
-      differs from one found in HumanDescription. 'Ethan@Rumba Dancing' was found
-      instead of 'EthanSkeleton'.\nCopied Avatar Rig Configuration mis-match. Bone
-      length in copied configuration does not match position in animation file:\n\t'EthanLeftUpLeg'
-      : position error = 98.668373 mm\n\t'EthanLeftLeg' : position error = 406.249786
-      mm\n\t'EthanLeftFoot' : position error = 377.338135 mm\n\t'EthanLeftToe1' :
-      position error = 158.233475 mm\n\t'EthanRightUpLeg' : position error = 98.668419
-      mm\n\t'EthanRightLeg' : position error = 406.249878 mm\n\t'EthanRightFoot'
-      : position error = 377.338287 mm\n\t'EthanRightToe1' : position error = 158.233444
-      mm\n"
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
+      does not match position in animation file:\n\t'EthanLeftUpLeg' : position error
+      = 101.537209 mm\n\t'EthanLeftLeg' : position error = 418.061707 mm\n\t'EthanLeftFoot'
+      : position error = 388.309418 mm\n\t'EthanLeftToe1' : position error = 162.834183
+      mm\n\t'EthanRightUpLeg' : position error = 101.537247 mm\n\t'EthanRightLeg'
+      : position error = 418.061798 mm\n\t'EthanRightFoot' : position error = 388.309570
+      mm\n\t'EthanRightToe1' : position error = 162.834167 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -515,29 +510,14 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Ethan(Clone)
+    - name: Ethan@Rumba Dancing(Clone)
       parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: EthanBody
-      parentName: Ethan(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: EthanGlasses
-      parentName: Ethan(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: EthanSkeleton
-      parentName: Ethan(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 0.017038945, y: -0.03453041, z: -0.017990934}
+      rotation: {x: 0.03557226, y: -0.14200565, z: 0.014495082, w: 0.9891203}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanHips
-      parentName: EthanSkeleton
-      position: {x: 0.000042162257, y: 77.87106, z: -3.3025584}
+      parentName: Ethan@Rumba Dancing(Clone)
+      position: {x: 0, y: 75.4, z: -3.3025584}
       rotation: {x: -0.49999934, y: 0.49999934, z: -0.50000066, w: 0.50000066}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanSpine
@@ -728,7 +708,7 @@ ModelImporter:
     - name: EthanLeftHandIndex3
       parentName: EthanLeftHandIndex2
       position: {x: -1.2793984, y: 1.6905012, z: 1.1081522}
-      rotation: {x: -0.02921515, y: 0.08614237, z: -0.2737419, w: 0.9574922}
+      rotation: {x: -0.029215151, y: 0.086142376, z: -0.27374193, w: 0.95749223}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanLeftHandIndex4
       parentName: EthanLeftHandIndex3
@@ -748,7 +728,7 @@ ModelImporter:
     - name: EthanLeftHandMiddle3
       parentName: EthanLeftHandMiddle2
       position: {x: -1.7910193, y: 1.4384004, z: 1.3012276}
-      rotation: {x: -0.040044915, y: 0.008001845, z: -0.18298166, w: 0.9822679}
+      rotation: {x: -0.04004491, y: 0.008001845, z: -0.18298164, w: 0.9822679}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanLeftHandMiddle4
       parentName: EthanLeftHandMiddle3
@@ -778,7 +758,7 @@ ModelImporter:
     - name: EthanLeftHandRing1
       parentName: EthanLeftHand
       position: {x: 1.1634815, y: 9.708645, z: 0.849549}
-      rotation: {x: -0.04750495, y: -0.02680468, z: -0.21266928, w: 0.9756006}
+      rotation: {x: -0.04750495, y: -0.026804682, z: -0.21266928, w: 0.97560066}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanLeftHandRing2
       parentName: EthanLeftHandRing1
@@ -798,7 +778,7 @@ ModelImporter:
     - name: EthanLeftHandThumb1
       parentName: EthanLeftHand
       position: {x: -0.4633863, y: 2.8035662, z: 4.895334}
-      rotation: {x: 0.66034335, y: -0.2809301, z: -0.23108189, w: 0.6569825}
+      rotation: {x: 0.6603434, y: -0.28093013, z: -0.2310819, w: 0.65698254}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanLeftHandThumb2
       parentName: EthanLeftHandThumb1
@@ -848,7 +828,7 @@ ModelImporter:
     - name: EthanRightHandIndex3
       parentName: EthanRightHandIndex2
       position: {x: -1.2793941, y: 1.690497, z: -1.108144}
-      rotation: {x: 0.029214451, y: -0.08614219, z: -0.27374247, w: 0.9574922}
+      rotation: {x: 0.029214447, y: -0.08614219, z: -0.27374244, w: 0.9574922}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanRightHandIndex4
       parentName: EthanRightHandIndex3
@@ -878,17 +858,17 @@ ModelImporter:
     - name: EthanRightHandPinky1
       parentName: EthanRightHand
       position: {x: -0.67501056, y: 9.838347, z: 0.5122984}
-      rotation: {x: 0.14634132, y: -0.0853054, z: -0.3388892, w: 0.92545193}
+      rotation: {x: 0.14634134, y: -0.08530541, z: -0.33888924, w: 0.925452}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanRightHandPinky2
       parentName: EthanRightHandPinky1
       position: {x: -1.0876534, y: 0.954607, z: -0.9400739}
-      rotation: {x: 0.035175707, y: -0.014915071, z: -0.15348981, w: 0.98741126}
+      rotation: {x: 0.03517571, y: -0.014915072, z: -0.15348983, w: 0.9874113}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanRightHandPinky3
       parentName: EthanRightHandPinky2
       position: {x: -1.5650306, y: 0.4325165, z: -1.0911368}
-      rotation: {x: 0.04428908, y: -0.00024435105, z: -0.18078858, w: 0.9825242}
+      rotation: {x: 0.044289082, y: -0.00024435107, z: -0.18078859, w: 0.9825243}
       scale: {x: 1, y: 1, z: 1}
     - name: EthanRightHandPinky4
       parentName: EthanRightHandPinky3

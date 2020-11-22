@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Aspect;
 
 public class AIMovement : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class AIMovement : MonoBehaviour
 
     //Movement variables
     private float m_speed;
+
+    public float m_carSpeed;
 
     //End points
     private List<GameObject> roadEnds = new List<GameObject>();
@@ -21,13 +24,16 @@ public class AIMovement : MonoBehaviour
     private Animator anim;
     private Rigidbody rb;
 
+    //toggle
+    public bool canMove = true;
+
     void Start()
     {
         //determine their speed based on their AI type
         switch (m_type)
         {
             case AIType.Car:
-                m_speed = 30;
+                m_speed = m_carSpeed;
                 break;
             case AIType.Pedestrian:
                 m_speed = 0.5f;
@@ -62,17 +68,34 @@ public class AIMovement : MonoBehaviour
                     RigidbodyConstraints.FreezeRotationY |
                     RigidbodyConstraints.FreezeRotationZ;
         }
+
+        else if (m_type == AIType.Car)
+        {
+            this.gameObject.AddComponent(typeof(Aspect));
+            this.gameObject.GetComponent<Aspect>().aspectType = AspectTypes.ENEMY;
+
+            this.gameObject.AddComponent(typeof(Perspective));
+
+            this.gameObject.AddComponent(typeof(Touch));
+        }
     }
 
     void Update()
     {
-        //Cars needs to move forward as if it's driving forward
-        if (m_type == AIType.Car)
-            this.transform.Translate(0, 0, m_speed * Time.deltaTime);
+        if (canMove)
+        {
+            //Cars needs to move forward as if it's driving forward
+            if (m_type == AIType.Car)
+                this.transform.Translate(0, 0, m_speed * Time.deltaTime);
 
-        //Pedestrains need to update their animator in order to move forward
-        else if (m_type == AIType.Pedestrian)
-            anim.SetFloat("Forward", m_speed);
+            //Pedestrains need to update their animator in order to move forward
+            else if (m_type == AIType.Pedestrian)
+                anim.SetFloat("Forward", m_speed);
+        }
+        else if (!canMove)
+        {
+            StartCoroutine("Pause");
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -118,5 +141,18 @@ public class AIMovement : MonoBehaviour
                 this.transform.rotation = randomStart.transform.rotation;
             }
         }
+    }
+
+    IEnumerator Pause()
+    {
+        yield return new WaitForSeconds(1.5f);
+        canMove = true;
+        GameObject stopsign = GameObject.FindGameObjectWithTag("Stopsign");
+
+        this.GetComponent<Perspective>().enabled = false;
+        yield return new WaitForSeconds(2f);
+        this.GetComponent<Perspective>().enabled = true;
+
+        StopAllCoroutines();
     }
 }

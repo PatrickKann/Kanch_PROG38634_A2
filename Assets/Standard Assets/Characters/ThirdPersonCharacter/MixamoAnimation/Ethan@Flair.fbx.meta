@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
+    second: Flair
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -19,11 +19,17 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Errors found in
-      old project file will be treated as a warnings. Configuration mis-match will
-      be ignored, but current Configuration needs to be fixed:\n\tParent for 'EthanHips'
-      differs from one found in HumanDescription. 'Ethan@Flair' was found instead
-      of 'EthanSkeleton'.\n"
+    rigImportWarnings: "Avatar creation errors found in old project file will be
+      treated as a warnings. Error will be ignored, but current Configuration needs
+      to be fixed:\n\tParent for 'EthanHips' differs from one found in HumanDescription.
+      'Ethan@Flair' was found instead of 'EthanSkeleton'.\nAvatar Rig Configuration
+      mis-match. Bone length in configuration does not match position in animation
+      file:\n\t'EthanLeftUpLeg' : position error = 98.739105 mm\n\t'EthanLeftLeg'
+      : position error = 406.540985 mm\n\t'EthanLeftFoot' : position error = 377.608612
+      mm\n\t'EthanLeftToe1' : position error = 158.346909 mm\n\t'EthanRightUpLeg'
+      : position error = 98.739136 mm\n\t'EthanRightLeg' : position error = 406.540955
+      mm\n\t'EthanRightFoot' : position error = 377.608582 mm\n\t'EthanRightToe1'
+      : position error = 158.346909 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -40,7 +46,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Flair
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: -0.3
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []

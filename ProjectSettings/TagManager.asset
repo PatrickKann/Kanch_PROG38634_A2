@@ -9,6 +9,10 @@ TagManager:
   - EndOfSidewalk
   - Car
   - Pedestrian
+  - Blip
+  - Enemy
+  - Stopsign
+  - Wall
   layers:
   - Default
   - TransparentFX
