@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeDirection : MonoBehaviour
+public class AIChangeDirection : MonoBehaviour
 {
     private Animator anim;
     public float m_speed;

@@ -7,12 +7,6 @@ public class CharacterMovement : MonoBehaviour
     private Animator anim;
     private Rigidbody rb;
 
-    [Range(0.5f, 10.0f)]
-    public float m_walkSpeed = 6.0f;
-
-    [Range(1f, 100.0f)]
-    public float m_turnSpeed = 75.0f;
-
     void Start()
     {
         anim = GetComponent<Animator>();

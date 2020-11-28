@@ -13,6 +13,9 @@ TagManager:
   - Enemy
   - Stopsign
   - Wall
+  - Treasure
+  - TreasurePoint
+  - PatrolPoint
   layers:
   - Default
   - TransparentFX
