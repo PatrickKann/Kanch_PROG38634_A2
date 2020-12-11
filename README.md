@@ -1,2 +1,2 @@
-# PROG38634_Exercise1
- Exercise 1 for PROG 38634 3D Game Development 
+# PROG38634_Assignment2
+Assignment2 for PROG 38634 3D Game Development 
