@@ -71,6 +71,8 @@ public class AI : MonoBehaviour {
     }
 
     public bool IsPlayerVisible() {
+        if (player == null) return false;
+
         RaycastHit hit;
 
         Vector3 vecToPlayer = (player.transform.position + Vector3.up) - transform.position;
